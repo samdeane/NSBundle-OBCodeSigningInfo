@@ -22,8 +22,7 @@
 {
     // Check existence of Mac App Store receipt
     NSURL *appStoreReceiptURL = [self appStoreReceiptURL];
-    NSFileManager *fileManager = [[NSFileManager alloc] init];
-    BOOL appStoreReceiptExists = [fileManager fileExistsAtPath:[appStoreReceiptURL path]];
+    BOOL appStoreReceiptExists = [[NSFileManager defaultManager] fileExistsAtPath:[appStoreReceiptURL path]];
     return appStoreReceiptExists;
 }
 
