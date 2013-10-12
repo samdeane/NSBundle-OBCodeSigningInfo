@@ -93,7 +93,7 @@
 {
     NSURL *bundleURL = [self bundleURL];
     SecStaticCodeRef staticCode = NULL;
-    SecStaticCodeCreateWithPath((CFURLRef)bundleURL, kSecCSDefaultFlags, &staticCode);
+    SecStaticCodeCreateWithPath((__bridge CFURLRef)bundleURL, kSecCSDefaultFlags, &staticCode);
     return staticCode;
 }
 
